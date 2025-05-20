@@ -101,16 +101,25 @@ main section {
 /* --------------------
    4. Hero Section 
    -------------------- */
+/* Full Page Header with Hero Section */
+.full-page-header {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
 .hero-section {
-    min-height: 80vh;
+    height: 100%;
     display: flex;
     align-items: center;
     position: relative;
-    background: #ffffff;
+    background: transparent;
     overflow: hidden;
+    padding-top: 4rem;
 }
 
-.hero-section .container {
+.hero-section .container, .full-page-header .container {
     position: relative;
     z-index: 1;
 }
@@ -123,11 +132,23 @@ main section {
     right: 0;
     bottom: 0;
     /* Much more prominent gradient focused on the left side where CTAs are */
-    background: radial-gradient(ellipse 60% 70% at 25% 50%, transparent 0%, rgba(40, 26, 51, 0.01) 40%, rgba(40, 26, 51, 0.2) 55%, rgba(40, 26, 51, 0.7) 100%);
+    background: radial-gradient(ellipse 60% 70% at 25% 60%, transparent 0%, rgba(40, 26, 51, 0.01) 40%, rgba(40, 26, 51, 0.2) 55%, rgba(40, 26, 51, 0.7) 100%);
     pointer-events: none;
     z-index: 0;
     mix-blend-mode: normal;
     transform-origin: 25% 50%;
+}
+
+.gradient-spotlight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(154, 69, 210, 0.15) 0%, rgba(40, 26, 51, 0.01) 50%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
 }
 
 
@@ -299,9 +320,14 @@ section.bg-white, nav.bg-white, footer.bg-white {
         max-height: 40px;
     }
     
+    .full-page-header {
+        height: auto;
+        min-height: 100vh;
+    }
+    
     .hero-section {
-        min-height: auto;
-        padding: 3rem 0;
+        min-height: 90vh;
+        padding: 6rem 0 3rem;
         /* Simple white background for mobile as well */
         background: #ffffff;
     }

@@ -17,65 +17,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="min-h-screen">
-    <!-- Navigation -->
-    <nav class="bg-white py-4 px-6 sticky top-0 z-50 light-nav">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="images/qrg/Horizontal-Color-Color.png" alt="Quantum Realm Games Logo" class="h-10 w-auto">
-            </div>
-            
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#games" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Games</a>
-                <a href="#tools" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Tools</a>
-                <a href="#vision" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Vision</a>
-                <a href="#community" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Community</a>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <div class="mobile-nav md:hidden">
-                <input type="checkbox" id="menu-toggle" class="hidden">
-                <label for="menu-toggle" class="block text-gray-700 cursor-pointer">
-                    <i class="fas fa-bars text-2xl"></i>
-                </label>
+    <!-- Full Page Header with Hero Section -->
+    <header class="full-page-header">
+        <!-- Navigation -->
+        <nav class="py-4 px-6 absolute top-0 left-0 right-0 z-50">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="images/qrg/Horizontal-Color-Color.png" alt="Quantum Realm Games Logo" class="h-10 w-auto">
+                </div>
                 
-                <div class="mobile-menu">
-                    <div class="mobile-menu-container">
-                        <label for="menu-toggle" class="absolute top-6 right-6 text-3xl text-gray-700 cursor-pointer">
-                            <i class="fas fa-times"></i>
-                        </label>
-                        <div class="flex flex-col items-center justify-center space-y-8 py-12">
-                            <label for="menu-toggle">
-                                <a href="#games" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Games</a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#games" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Games</a>
+                    <a href="#tools" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Tools</a>
+                    <a href="#vision" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Vision</a>
+                    <a href="#community" class="text-gray-700 hover:text-[#FD0D1B] font-medium">Community</a>
+                </div>
+                
+                <!-- Mobile Navigation -->
+                <div class="mobile-nav md:hidden">
+                    <input type="checkbox" id="menu-toggle" class="hidden">
+                    <label for="menu-toggle" class="block text-gray-700 cursor-pointer">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </label>
+                    
+                    <div class="mobile-menu">
+                        <div class="mobile-menu-container">
+                            <label for="menu-toggle" class="absolute top-6 right-6 text-3xl text-gray-700 cursor-pointer">
+                                <i class="fas fa-times"></i>
                             </label>
-                            <label for="menu-toggle">
-                                <a href="#tools" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Tools</a>
-                            </label>
-                            <label for="menu-toggle">
-                                <a href="#vision" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Vision</a>
-                            </label>
-                            <label for="menu-toggle">
-                                <a href="#community" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Community</a>
-                            </label>
+                            <div class="flex flex-col items-center justify-center space-y-8 py-12">
+                                <label for="menu-toggle">
+                                    <a href="#games" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Games</a>
+                                </label>
+                                <label for="menu-toggle">
+                                    <a href="#tools" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Tools</a>
+                                </label>
+                                <label for="menu-toggle">
+                                    <a href="#vision" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Vision</a>
+                                </label>
+                                <label for="menu-toggle">
+                                    <a href="#community" class="text-2xl text-gray-700 hover:text-[#FD0D1B]">Community</a>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="gradient-spotlight"></div>
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col-reverse md:flex-row items-center">
-                <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                        Play <span class="qrg-gradient-text">Quantum</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Real quantum mechanics. Intuitive gameplay. Powerful creative tools.
-                    </p>
+        <!-- Hero Content -->
+        <div class="hero-section">
+            <div class="gradient-spotlight"></div>
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col-reverse md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                            Play <span class="qrg-gradient-text">Quantum</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Real quantum mechanics. Intuitive gameplay. Powerful creative tools.
+                        </p>
                     <div class="flex flex-wrap gap-4 mb-6">
                         <a href="https://store.steampowered.com/app/453870/Quantum_Chess/" target="_blank" class="px-6 py-3 bg-gradient-to-r from-[#2C3491] to-[#9A45D2] hover:from-[#252c7a] hover:to-[#833bb3] rounded-md font-medium text-white flex items-center text-lg">
                             <i class="fas fa-chess-queen mr-2"></i> Play Quantum Chess on Steam
@@ -93,7 +95,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    </header>
 
     <!-- Main Content -->
     <main>
