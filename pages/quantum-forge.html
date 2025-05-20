@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Forge - Quantum Realm Games</title>
+    
+    <!-- External CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/tailwind-custom.css">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="quantum-gradient py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <a href="../index.html">
+                    <img src="../images/Horizontal-Color-Color.png" alt="Quantum Realm Games Logo" class="h-10 w-auto">
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#games" class="text-amber-200 hover:text-white font-medium">Games</a>
+                <a href="../index.html#tools" class="text-amber-200 hover:text-white font-medium">Tools</a>
+                <a href="../index.html#vision" class="text-amber-200 hover:text-white font-medium">Vision</a>
+                <a href="../index.html#community" class="text-amber-200 hover:text-white font-medium">Community</a>
+            </div>
+            <button class="md:hidden text-amber-200 mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="product-hero quantum-gradient interference-pattern animate-gradient relative">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 qrg-gradient-text">Quantum Forge</h1>
+            <p class="text-xl max-w-3xl mx-auto mb-8 text-amber-100">
+                Build your own quantum experiences with our powerful development toolkit.
+                Create games, simulations, and educational tools powered by real quantum mechanics.
+            </p>
+            <a href="#download" class="px-8 py-4 bg-gradient-to-r from-[#FD0D1B] to-[#F59929] hover:from-[#eb0c19] hover:to-[#e38c26] rounded-full font-bold text-white btn-glow inline-block">
+                Download SDK
+            </a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#281A33] to-transparent"></div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- What is Quantum Forge Section -->
+        <section id="about" class="mb-24">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-teal-300">What is Quantum Forge?</h2>
+                <p class="text-lg mb-6 text-gray-300">
+                    Quantum Forge is a comprehensive development toolkit that lets creators build experiences powered by 
+                    real quantum mechanical principles. Whether you're building games, simulations, or educational tools, 
+                    Quantum Forge provides the foundation you need to create authentic quantum experiences.
+                </p>
+                <p class="text-lg mb-12 text-gray-300">
+                    Our SDK includes a quantum simulation engine, intuitive API, ready-to-use components, 
+                    and extensive documentation to help you bring your quantum ideas to life.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center qrg-gradient-text">Features</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="quantum-card rounded-xl p-6 quantum-border">
+                    <div class="w-12 h-12 rounded-full bg-[#F59929]/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-atom text-2xl text-[#F59929]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-[#F59929]">Quantum Simulator</h3>
+                    <p class="text-gray-300">
+                        A high-performance quantum circuit simulator that accurately models quantum 
+                        states, gates, and measurement operations.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="quantum-card rounded-xl p-6 quantum-border">
+                    <div class="w-12 h-12 rounded-full bg-[#F59929]/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-2xl text-[#F59929]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-[#F59929]">Intuitive API</h3>
+                    <p class="text-gray-300">
+                        User-friendly interfaces for creating and manipulating quantum states 
+                        without requiring extensive quantum physics knowledge.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="quantum-card rounded-xl p-6 quantum-border">
+                    <div class="w-12 h-12 rounded-full bg-[#F59929]/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-puzzle-piece text-2xl text-[#F59929]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-[#F59929]">Component Library</h3>
+                    <p class="text-gray-300">
+                        Pre-built components for common quantum operations, visualizations, 
+                        and UI elements to speed up development.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="quantum-card rounded-xl p-6 quantum-border">
+                    <div class="w-12 h-12 rounded-full bg-[#F59929]/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-book text-2xl text-[#F59929]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-[#F59929]">Documentation</h3>
+                    <p class="text-gray-300">
+                        Comprehensive guides, tutorials, and API references to help you 
+                        understand both the toolkit and the quantum concepts behind it.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="quantum-card rounded-xl p-6 quantum-border">
+                    <div class="w-12 h-12 rounded-full bg-[#F59929]/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-2xl text-[#F59929]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-[#F59929]">Cross-Platform</h3>
+                    <p class="text-gray-300">
+                        Build for web, desktop, and mobile with platform-specific optimizations 
+                        and consistent quantum behavior across all targets.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="quantum-card rounded-xl p-6 quantum-border">
+                    <div class="w-12 h-12 rounded-full bg-[#F59929]/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-2xl text-[#F59929]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-[#F59929]">Community Support</h3>
+                    <p class="text-gray-300">
+                        Access to an active community of developers, tutorials, sample projects, 
+                        and direct support from our quantum computing experts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Example Section -->
+        <section id="code-example" class="mb-24">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-teal-300">Example Code</h2>
+                <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
+                    <pre class="text-gray-200 font-mono"><code><span class="text-purple-400">import</span> QuantumEngine <span class="text-purple-400">from</span> <span class="text-green-400">'quantum-forge'</span>
+
+<span class="text-purple-400">class</span> <span class="text-blue-400">QuantumGame</span>:
+    <span class="text-purple-400">def</span> <span class="text-yellow-400">__init__</span>(self):
+        self.engine = QuantumEngine()
+        self.qubits = self.engine.create_qubits(8)
+    
+    <span class="text-purple-400">def</span> <span class="text-yellow-400">create_superposition</span>(self, qubit_index):
+        <span class="text-gray-500"># Apply Hadamard gate to create superposition</span>
+        self.engine.apply_hadamard(self.qubits[qubit_index])
+    
+    <span class="text-purple-400">def</span> <span class="text-yellow-400">entangle_qubits</span>(self, qubit1, qubit2):
+        <span class="text-gray-500"># Create quantum entanglement between two qubits</span>
+        self.engine.apply_cnot(self.qubits[qubit1], self.qubits[qubit2])</code></pre>
+                </div>
+                <p class="text-lg mt-6 text-gray-300">
+                    With our extensive library of quantum operations and intuitive API, you can quickly start building 
+                    quantum games without needing a PhD in quantum physics.
+                </p>
+            </div>
+        </section>
+
+        <!-- Get Started Section -->
+        <section id="download" class="mb-24 bg-gradient-to-r from-[#281A33]/60 to-[#3B2349]/60 rounded-2xl p-8 md:p-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 qrg-gradient-text">Get Started with Quantum Forge</h2>
+                <p class="text-lg mb-8 text-gray-300">
+                    Download our SDK, explore the documentation, and join our developer community to start 
+                    building your quantum-powered applications today.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="px-8 py-4 bg-gradient-to-r from-[#FD0D1B] to-[#F59929] hover:from-[#eb0c19] hover:to-[#e38c26] rounded-full font-bold text-white btn-glow flex items-center">
+                        <i class="fas fa-download mr-3"></i> Download SDK
+                    </a>
+                    <a href="#" class="px-8 py-4 bg-[#3B2349] hover:bg-[#4B2A5C] rounded-full font-bold text-white btn-glow flex items-center">
+                        <i class="fas fa-book mr-3"></i> Documentation
+                    </a>
+                    <a href="#" class="px-8 py-4 quantum-border rounded-full font-bold text-[#F59929] hover:bg-[#3B2349]/30 btn-glow flex items-center">
+                        <i class="fas fa-code mr-3"></i> Sample Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-[#0a090f] py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="footer-logo mb-6 md:mb-0">
+                    <img src="../images/Horizontal-Color-Color.png" alt="Quantum Realm Games Logo" class="h-10">
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-[#F59929] hover:text-[#FD0D1B]">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-[#F59929] hover:text-[#FD0D1B]">
+                        <i class="fab fa-discord text-xl"></i>
+                    </a>
+                    <a href="#" class="text-[#F59929] hover:text-[#FD0D1B]">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-[#F59929] hover:text-[#FD0D1B]">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-gray-800 mb-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-gray-500 text-sm">&copy; 2023 Quantum Realm Games. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap gap-x-8 gap-y-2">
+                    <a href="#" class="text-gray-400 hover:text-teal-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-teal-300 text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-teal-300 text-sm">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleMobileMenu();
+            initQuantumCardEffects();
+        });
+    </script>
+</body>
+</html>
