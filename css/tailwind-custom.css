@@ -130,6 +130,8 @@ main section {
     transform-origin: 25% 50%;
 }
 
+
+
 .hero-image-container {
     position: relative;
     display: flex;
@@ -170,7 +172,7 @@ main section {
 
 /* Adding padding to the Quantum Chess logo image */
 .card-image-container img.product-image {
-    padding: 3rem;
+    padding: 4rem;
     background-color: #ffffff;
 }
 
@@ -247,6 +249,20 @@ section.bg-gray-50 {
 }
 
 /* Games section with diagonal striped gradient background */
+#games {
+    background: repeating-linear-gradient(
+        45deg,
+        #f5f7fa,
+        #f5f7fa 15px,
+        rgba(237, 240, 245, 0.8) 15px,
+        rgba(237, 240, 245, 0.8) 30px
+    ), 
+    linear-gradient(
+        to bottom right,
+        rgba(154, 69, 210, 0.05),
+        rgba(249, 107, 41, 0.05)
+    ) !important;
+}
 
 section.bg-white, nav.bg-white, footer.bg-white {
     background: #ffffff !important;
