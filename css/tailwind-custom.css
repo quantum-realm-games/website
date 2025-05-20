@@ -18,24 +18,10 @@
    -------------------- */
 body {
     font-family: 'Rajdhani', sans-serif;
-    background: radial-gradient(circle at center, #ffffff 0%, #f0f2f5 100%);
+    background: #ffffff;
     color: #333333;
     min-height: 100vh;
     position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at center, transparent 0%, transparent 75%, rgba(154, 69, 210, 0.03) 90%, rgba(154, 69, 210, 0.06) 100%),
-        radial-gradient(circle at center, transparent 0%, transparent 80%, rgba(249, 107, 41, 0.02) 90%, rgba(249, 107, 41, 0.04) 100%);
-    pointer-events: none;
-    z-index: -1;
 }
 
 /* Main section base styles */
@@ -101,9 +87,9 @@ main section {
 }
 
 .logo-desaturated {
-    filter: saturate(0.1) blur(.3) brightness(0.95);
+    filter: saturate(0) blur(.3) brightness(0.95);
     transform: scale(1);
-    opacity: 0.5;
+    opacity: 0.30;
 }
 
 /* Footer Styles */
@@ -137,7 +123,7 @@ main section {
     right: 0;
     bottom: 0;
     /* Much more prominent gradient focused on the left side where CTAs are */
-    background: radial-gradient(ellipse 60% 70% at 25% 50%, transparent 0%, rgba(154, 69, 210, 0.01) 35%, rgba(154, 69, 210, 0.025) 80%, rgba(154, 69, 210, 0.05) 100%);
+    background: radial-gradient(ellipse 60% 70% at 25% 50%, transparent 0%, rgba(40, 26, 51, 0.01) 40%, rgba(40, 26, 51, 0.2) 55%, rgba(40, 26, 51, 0.7) 100%);
     pointer-events: none;
     z-index: 0;
     mix-blend-mode: normal;
@@ -151,26 +137,11 @@ main section {
     justify-content: center;
 }
 
-/* Overlay class for stronger gradients */
-.gradient-spotlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(ellipse 50% 60% at 25% 50%, transparent 0%, transparent 30%, rgba(154, 69, 210, 0.1) 50%, rgba(154, 69, 210, 0.4) 70%, transparent 100%),
-        radial-gradient(ellipse 40% 50% at 25% 50%, transparent 0%, transparent 30%, rgba(249, 107, 41, 0.1) 50%, rgba(249, 107, 41, 0.35) 70%, transparent 100%);
-    pointer-events: none;
-    z-index: 1;
-    mix-blend-mode: soft-light;
-}
-
 /* --------------------
    5. Cards & Containers 
    -------------------- */
 .quantum-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f2f5f9 100%);
+    background: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     border: 1px solid transparent;
@@ -179,7 +150,7 @@ main section {
 .quantum-card:hover {
     border-color: #e9ecef;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    background: #ffffff;
 }
 
 .quantum-border {
@@ -195,6 +166,12 @@ main section {
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease;
+}
+
+/* Adding padding to the Quantum Chess logo image */
+.card-image-container img.product-image {
+    padding: 3rem;
+    background-color: #ffffff;
 }
 
 .card-image-container:hover::after {
@@ -261,49 +238,20 @@ main section {
 /* --------------------
    7. Sections & Backgrounds 
    -------------------- */
-/* Section Backgrounds */
+
+/* Clean section styles without gradients */
 section.bg-gray-50 {
-    background: radial-gradient(circle at 70% 30%, #f9fafb 0%, #edf0f5 100%) !important;
+    background: #f9fafb !important;
     position: relative;
     overflow: hidden;
 }
 
-section.bg-gray-50::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 70% 30%, transparent 0%, transparent 40%, rgba(154, 69, 210, 0.08) 60%, rgba(154, 69, 210, 0.15) 90%),
-                radial-gradient(circle at 30% 70%, transparent 0%, transparent 40%, rgba(249, 107, 41, 0.06) 60%, rgba(249, 107, 41, 0.12) 90%);
-    pointer-events: none;
-    mix-blend-mode: multiply;
-}
+/* Games section with diagonal striped gradient background */
 
 section.bg-white, nav.bg-white, footer.bg-white {
-    background: radial-gradient(circle at 30% 70%, #ffffff 0%, #f5f7fa 100%) !important;
+    background: #ffffff !important;
     position: relative;
     overflow: hidden;
-}
-
-section.bg-white::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 70%, transparent 0%, transparent 40%, rgba(154, 69, 210, 0.06) 60%, rgba(154, 69, 210, 0.12) 85%),
-                radial-gradient(circle at 70% 30%, transparent 0%, transparent 40%, rgba(249, 107, 41, 0.05) 60%, rgba(249, 107, 41, 0.1) 85%);
-    pointer-events: none;
-    mix-blend-mode: multiply;
-}
-
-.interference-pattern {
-    background-image: 
-        radial-gradient(circle at center, rgba(249, 107, 41, 0.03) 0%, transparent 70%),
-        repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(253, 13, 27, 0.03) 2px, rgba(245, 153, 41, 0.03) 4px);
 }
 
 /* --------------------
@@ -343,19 +291,10 @@ section.bg-white::before {
     }
     
     .hero-section::before {
-        /* Mobile gradient with wider spread */
-        background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(154, 69, 210, 0.3) 0%, rgba(154, 69, 210, 0.2) 50%, rgba(154, 69, 210, 0.05) 70%, transparent 80%),
-                    radial-gradient(ellipse 60% 70% at 50% 50%, rgba(249, 107, 41, 0.25) 0%, rgba(249, 107, 41, 0.15) 50%, rgba(249, 107, 41, 0.05) 70%, transparent 80%);
+        /* Mobile gradient with wider spread - keeping this for hero section only */
+        background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(40, 26, 51, 0.3) 0%, rgba(40, 26, 51, 0.2) 50%, rgba(40, 26, 51, 0.05) 70%, transparent 80%);
         mix-blend-mode: normal;
         transform-origin: 50% 50%;
-    }
-    
-    .hero-section::after {
-        background: 
-            radial-gradient(ellipse 60% 70% at 50% 50%, rgba(154, 69, 210, 0.2) 0%, rgba(154, 69, 210, 0.15) 40%, rgba(154, 69, 210, 0.05) 70%, transparent 100%),
-            radial-gradient(ellipse 50% 60% at 50% 50%, rgba(249, 107, 41, 0.15) 0%, rgba(249, 107, 41, 0.1) 40%, rgba(249, 107, 41, 0.05) 70%, transparent 100%);
-        mix-blend-mode: screen;
-        background-size: 120% 120%;
     }
     
     .btn-glow {
