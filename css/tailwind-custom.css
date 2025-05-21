@@ -268,20 +268,9 @@ section.bg-gray-50 {
     overflow: hidden;
 }
 
-/* Games section with diagonal striped gradient background */
+/* Games section with simple white background */
 #games {
-    background: repeating-linear-gradient(
-        45deg,
-        #f5f7fa,
-        #f5f7fa 15px,
-        rgba(237, 240, 245, 0.8) 15px,
-        rgba(237, 240, 245, 0.8) 30px
-    ), 
-    linear-gradient(
-        to bottom right,
-        rgba(154, 69, 210, 0.05),
-        rgba(249, 107, 41, 0.05)
-    ) !important;
+    background: #ffffff !important;
 }
 
 section.bg-white, nav.bg-white, footer.bg-white {
