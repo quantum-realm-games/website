@@ -112,7 +112,8 @@ main section {
 
 /* Shorter header that shows "Our Games" section heading */
 .full-page-header.shorter-header {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 120px);
+    min-height: 600px; /* Added minimum height to ensure the header is never too short */
 }
 
 .hero-section {
@@ -122,7 +123,28 @@ main section {
     position: relative;
     background: transparent;
     overflow: hidden;
-    padding-top: 4rem;
+    padding-top: 6rem; /* Increased padding to ensure content doesn't overlap with nav */
+    min-height: 500px; /* Minimum height to ensure CTA buttons never overlap with nav */
+    background-color: #ffffff;
+    /* Background image moved to pseudo-element for opacity control */
+}
+
+/* Apply background image with opacity control */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/qrg/qrg-logo-big.png');
+    background-position: 90% center; /* Position the image on the right side */
+    background-repeat: no-repeat;
+    background-size: 40% auto; /* Size the image to take about 40% width */
+    filter: saturate(0.9) blur(0.3px) brightness(0.95);
+    opacity: 0.2; /* Set opacity to 30% */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-section .container, .full-page-header .container {
@@ -133,7 +155,7 @@ main section {
 .hero-section::before {
     content: '';
     position: absolute;
-    top: 0; /* Moved down by the height of the nav bar */
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -150,13 +172,6 @@ main section {
     z-index: 0;
     mix-blend-mode: normal;
     transform-origin: 30% 50%;
-}
-
-.hero-image-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* --------------------
@@ -271,6 +286,7 @@ section.bg-gray-50 {
 /* Games section with simple white background */
 #games {
     background: #ffffff !important;
+    padding-top: 3rem; /* Add padding to ensure there's space above the "Our Games" heading */
 }
 
 section.bg-white, nav.bg-white, footer.bg-white {
@@ -314,21 +330,30 @@ section.bg-white, nav.bg-white, footer.bg-white {
     }
     
     .full-page-header.shorter-header {
-        min-height: calc(100vh - 160px);
+        min-height: calc(100vh - 80px); /* Reduced height to show "Our Games" at bottom of screen */
+        min-height: 500px; /* Reduced minimum height on mobile */
     }
     
     .hero-section {
-        min-height: 90vh;
-        padding: 6rem 0 3rem;
-        /* Simple white background for mobile as well */
-        background: #ffffff;
+        min-height: 450px; /* Reduced minimum height for mobile to let "Our Games" show */
+        padding: 7rem 0 1rem; /* Reduced bottom padding */
+        background-color: #ffffff;
+    }
+    
+    .hero-section::after {
+        /* Remove background image on mobile */
+        background-image: none;
     }
     
     .hero-section::before {
-        /* Mobile gradient with wider spread - keeping this for hero section only */
-        background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(40, 26, 51, 0.3) 0%, rgba(40, 26, 51, 0.2) 50%, rgba(40, 26, 51, 0.05) 70%, transparent 80%);
+        /* Change to linear gradient for mobile */
+        background: linear-gradient(to top, 
+            rgba(40, 26, 51, 0.01) 0%, 
+            rgba(40, 26, 51, 0.2) 20%,
+            rgba(40, 26, 51, 0.5) 60%, 
+            rgba(40, 26, 51, 0.7) 100%
+        );
         mix-blend-mode: normal;
-        transform-origin: 50% 50%;
     }
     
     .btn-glow {

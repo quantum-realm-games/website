@@ -11,6 +11,7 @@
     <!-- External CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/tailwind-custom.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css">
     
     <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -70,14 +71,13 @@
         <div class="hero-section">
             <div class="gradient-spotlight"></div>
             <div class="container mx-auto px-6">
-                <div class="flex flex-col-reverse md:flex-row items-center">
-                    <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                            Play <span class="qrg-gradient-text">Quantum</span>
-                        </h1>
-                        <p class="text-xl text-gray-600 mb-8">
-                            Real quantum mechanics. Intuitive gameplay. Powerful creative tools.
-                        </p>
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        Play <span class="qrg-gradient-text">Quantum</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Real quantum mechanics. Intuitive gameplay. Powerful creative tools.
+                    </p>
                     <div class="flex flex-wrap gap-4 mb-6">
                         <a href="https://store.steampowered.com/app/453870/Quantum_Chess/" target="_blank" class="px-6 py-3 bg-gradient-to-r from-[#2C3491] to-[#9A45D2] hover:from-[#252c7a] hover:to-[#833bb3] rounded-md font-medium text-white flex items-center text-lg">
                             <i class="fas fa-chess-queen mr-2"></i> Play Quantum Chess on Steam
@@ -86,12 +86,9 @@
                             <i class="fas fa-tools mr-2"></i> Create with Quantum Forge
                         </a>
                     </div>
-                    <a href="#games" class="text-gray-500 hover:text-gray-700 flex items-center text-lg">
+                    <a href="#games" class="text-gray-500 hover:text-gray-700 flex items-center text-lg mb-6 more-info-link">
                         <i class="fas fa-info-circle mr-1"></i> Learn more about our projects
                     </a>
-                </div>
-                <div class="md:w-1/2 hero-image-container">
-                    <img src="images/qrg/qrg-logo-big.png" alt="Quantum Realm Games Logo" class="hero-image rounded-lg logo-desaturated">
                 </div>
             </div>
         </div>
@@ -106,7 +103,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading">Our Games</h2>
                 
                 <div class="max-w-4xl mb-12">
-                    <p class="text-3xl text-gray-600">
+                    <p class="text-xl text-gray-600">
                         We believe games offer an unparalleled opportunity to get hands on with quantum mechanics.
                         Our games are designed to be fun, engaging, and genuinely quantum &mdash; no shortcuts.
                         <br>
@@ -159,7 +156,7 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 section-heading">Developer Tools</h2>
                 <div class="max-w-4xl mb-12">
-                    <p class="text-3xl text-gray-600">
+                    <p class="text-xl text-gray-600">
                         We believe quantum-native games are the next creative frontier, 
                         and the best quantum games are waiting to be discovered.
                         With the right tools, a global community of developers can explore and shape this new domain.
