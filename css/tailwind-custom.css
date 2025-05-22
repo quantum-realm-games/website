@@ -478,3 +478,14 @@ section.bg-white, nav.bg-white, footer.bg-white {
         border-left: 1px solid rgba(229, 231, 235, 0.5);
     }
 }
+
+/* Product cards centered with 80% width */
+.w-4\/5.mx-auto {
+    max-width: 80%;
+}
+
+@media (max-width: 768px) {
+    .w-4\/5.mx-auto {
+        max-width: 100%;
+    }
+}
