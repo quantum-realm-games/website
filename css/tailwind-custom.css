@@ -360,4 +360,121 @@ section.bg-white, nav.bg-white, footer.bg-white {
         box-shadow: 0 0 20px rgba(249, 107, 41, 0.4), 0 0 20px rgba(154, 69, 210, 0.45);
         text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
     }
+    
+    /* Quantum Chess Card Full Width Styles */
+    .games-section .w-full.mx-auto {
+        padding: 0;
+    }
+
+    .games-section .quantum-card,
+    #tools .quantum-card {
+        border-radius: 0.5rem;
+        width: 100%;
+    }
+    
+    .games-section .quantum-card .p-6,
+    #tools .quantum-card .p-6 {
+        padding: 1rem;
+    }
+    
+    /* Chess card has media first on mobile, Forge has media last */
+    .games-section .flex.flex-col.md\:flex-row.p-6 {
+        padding: 1rem;
+    }
+    
+    #tools .flex.flex-col.md\:flex-row.p-6 {
+        padding: 1rem;
+        flex-direction: column-reverse;
+    }
+    
+    /* Make the video thumbnail nicely sized on mobile */
+    .video-thumbnail-container {
+        max-width: 280px;
+        margin: 0 auto 1.5rem;
+    }
+    
+    /* Add spacing between the content and media on mobile */
+    .md\:w-1\/3.flex.flex-col {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Remove borders on mobile */
+    .chess-media, .forge-media {
+        border: none !important;
+    }
+}
+
+/* Video Thumbnail Styles */
+.video-thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-link {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.video-link:hover img {
+    transform: scale(1.05);
+}
+
+.aspect-w-16.aspect-h-9 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-w-16.aspect-h-9 img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-link:hover .rounded-full {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(253, 13, 27, 0.5);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .video-thumbnail-container {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .games-section .flex.flex-col.md\\:flex-row.p-6 {
+        padding: 1rem;
+    }
+}
+
+/* Adjust card layout for desktop */
+@media (min-width: 769px) {
+    .quantum-card .md\:w-1\/3.flex.flex-col {
+        padding-left: 1rem;
+    }
+    
+    .quantum-card .video-thumbnail-container {
+        max-width: 100%;
+    }
+    
+    /* Add a subtle divider between text and media */
+    .quantum-card .md\:w-2\/3.p-6 {
+        border-right: 1px solid rgba(229, 231, 235, 0.5);
+    }
+    
+    /* Specific styles for Quantum Chess (left) and Quantum Forge (right) layouts */
+    /* For Quantum Chess (media on left) */
+    .chess-media {
+        padding-right: 1.5rem;
+        border-right: 1px solid rgba(229, 231, 235, 0.5);
+    }
+    
+    /* For Quantum Forge (media on right) */
+    .forge-media {
+        padding-left: 1.5rem;
+        border-left: 1px solid rgba(229, 231, 235, 0.5);
+    }
 }
