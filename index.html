@@ -16,7 +16,18 @@
     <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1544481');
+    </script>
+    <!-- End MailerLite Universal -->
 </head>
+
 <body class="min-h-screen">
     <!-- Full Page Header with Hero Section (Shorter version by default) -->
     <header class="full-page-header shorter-header">
@@ -370,15 +381,102 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-gray-400 text-sm mb-2">
                         Subscribe to our newsletter for updates
                     </p>
-                    <div class="mt-2 flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#F59929] w-full">
-                        <button class="px-4 py-2 bg-gradient-to-r from-[#FD0D1B] to-[#F59929] hover:from-[#eb0c19] hover:to-[#e38c26] text-white rounded-r-md">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                    <form id="newsletter-form" class="ml-block-form mt-2" action="https://assets.mailerlite.com/jsonp/1544481/forms/155205637976885007/subscribe" data-code="" method="post">
+                        <div class="flex">
+                            <input aria-label="email" aria-required="true" type="email" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#F59929] w-full" data-inputmask="" name="fields[email]" placeholder="Your email" autocomplete="email" required>
+                            <button type="submit" class="px-4 py-2 bg-gradient-to-r from-[#FD0D1B] to-[#F59929] hover:from-[#eb0c19] hover:to-[#e38c26] text-white rounded-r-md">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="mt-2 flex items-start">
+                            <input type="checkbox" id="gdpr-consent" name="fields[gdpr]" class="mt-1 mr-2" required>
+                            <label for="gdpr-consent" class="text-xs text-gray-400">
+                                I consent to receive emails from Quantum Realm Games about news and updates. See our <a href="#" class="text-gray-300 hover:text-[#F59929] underline">Privacy Policy</a>.
+                            </label>
+                        </div>
+                        <div id="consent-error" class="text-red-500 text-xs mt-1" style="display: none;">
+                            Please confirm your consent to proceed.
+                        </div>
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                    <div id="newsletter-success" class="ml-form-successBody row-success" style="display: none">
+                        <div class="ml-form-successContent">
+                            <h4 class="text-green-500 text-sm mt-2">Thank you!</h4>
+                            <p class="text-green-500 text-xs">You have successfully joined our subscriber list.</p>
+                        </div>
                     </div>
+        </div>
+      </div>
+    </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const newsletterForm = document.getElementById('newsletter-form');
+      const successMessage = document.getElementById('newsletter-success');
+      const consentCheckbox = document.getElementById('gdpr-consent');
+      const consentError = document.getElementById('consent-error');
+      
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Check if consent checkbox is checked
+          if (consentCheckbox && !consentCheckbox.checked) {
+            consentError.style.display = 'block';
+            return;
+          }
+          
+          // Hide any previous error messages
+          if (consentError) {
+            consentError.style.display = 'none';
+          }
+          
+          const formData = new FormData(this);
+          const email = this.querySelector('input[name="fields[email]"]').value;
+          
+          // Form validation
+          if (!email || !email.includes('@')) {
+            return; // Let the browser handle validation
+          }
+          
+          // Submit form data via fetch API
+          fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'  // Required for cross-origin requests
+          })
+          .then(response => {
+            // Show success message
+            if (successMessage) {
+              successMessage.style.display = 'block';
+            }
+            
+            // Clear the form
+            newsletterForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              if (successMessage) {
+                successMessage.style.display = 'none';
+              }
+            }, 5000);
+          })
+          .catch(error => {
+            console.error('Newsletter submission error:', error);
+          });
+        });
+      }
+    });
+  </script>
+  
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+  <script>
+    fetch("https://assets.mailerlite.com/jsonp/1544481/forms/155205637976885007/takel")
+  </script>
                 </div>
             </div>
             
@@ -395,6 +493,5 @@
         </div>
     </footer>
 
-    <!-- No toggle JavaScript needed as we're using the shorter header by default -->
 </body>
 </html>
