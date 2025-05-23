@@ -1,0 +1,42 @@
+/* Social Media Icons */
+.social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Twitter */
+.social-icon.twitter:hover {
+    background-color: rgba(253, 13, 27, 0.1);
+    color: #FD0D1B;
+}
+
+/* YouTube */
+.social-icon.youtube:hover {
+    background-color: rgba(253, 13, 27, 0.1);
+    color: #FD0D1B;
+}
+
+/* GitHub */
+.social-icon.github:hover {
+    background-color: rgba(245, 153, 41, 0.1);
+    color: #F59929;
+}
+
+/* Discord */
+.social-icon.discord:hover {
+    background-color: rgba(245, 153, 41, 0.1);
+    color: #F59929;
+}
+
+/* LinkedIn */
+.social-icon.linkedin:hover {
+    background-color: rgba(10, 102, 194, 0.1);
+    color: #0A66C2;
+}
