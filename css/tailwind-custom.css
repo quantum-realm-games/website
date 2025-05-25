@@ -505,26 +505,26 @@ section.bg-white, nav.bg-white, footer.bg-white {
 
 /* Twitter */
 .social-icon.twitter:hover {
-    background-color: rgba(253, 13, 27, 0.1); /* Using qrg-accent-dark: #FD0D1B */
-    color: #FD0D1B;
+    background-color: rgba(0, 0, 0, 0.1); /* Black with opacity */
+    color: #000000; /* Black */
 }
 
 /* YouTube */
 .social-icon.youtube:hover {
-    background-color: rgba(253, 13, 27, 0.1); /* Using qrg-accent-dark: #FD0D1B */
-    color: #FD0D1B;
+    background-color: rgba(255, 0, 0, 0.1); /* Red with opacity */
+    color: #FF0000; /* Red */
 }
 
 /* GitHub */
 .social-icon.github:hover {
-    background-color: rgba(245, 153, 41, 0.1); /* Using qrg-accent-light: #F59929 */
-    color: #F59929;
+    background-color: rgba(0, 0, 0, 0.1); /* Black with opacity */
+    color: #000000; /* Black */
 }
 
 /* Discord */
 .social-icon.discord:hover {
-    background-color: rgba(245, 153, 41, 0.1); /* Using qrg-accent-light: #F59929 */
-    color: #F59929;
+    background-color: rgba(88, 101, 242, 0.1); /* Discord Blurple with opacity */
+    color: #5865F2; /* Discord Blurple */
 }
 
 /* LinkedIn */
