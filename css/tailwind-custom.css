@@ -248,27 +248,56 @@ main section {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.95);
+    width: 80%; /* Adjusted width */
+    max-width: 300px; /* Added max-width */
+    height: 100%; /* Changed to 100% for full height */
+    overflow-y: auto; /* Added for scrollable content if needed */
+    background-color: rgba(40, 26, 51, 0.95);
     z-index: 100;
     opacity: 0;
-    transition: opacity 0.3s ease, height 0s ease 0.3s;
+    transform: translateX(-100%); /* Slide in from left */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Added transform to transition */
 }
 
 .mobile-menu-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items to the left */
+    min-height: auto; /* Adjusted min-height */
+    padding: 4rem 1.5rem 2rem; /* Adjusted padding */
+}
+
+/* Styling for individual menu links */
+.mobile-menu-container a {
+    padding-top: 0.5rem; /* Reduced top padding */
+    padding-bottom: 0.5rem; /* Reduced bottom padding */
 }
 
 #menu-toggle:checked ~ .mobile-menu {
-    height: 100vh;
     opacity: 1;
+    transform: translateX(0); /* Slide in to view */
+    /* height: 100vh; removed, height is now 100% */
+    /* transition: opacity 0.3s ease; removed, combined with transform transition */
+}
+
+/* Overlay for closing menu when clicking outside */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99; /* Below menu, above content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+}
+
+#menu-toggle:checked ~ .mobile-menu-overlay {
+    opacity: 1;
+    visibility: visible;
     transition: opacity 0.3s ease;
 }
 

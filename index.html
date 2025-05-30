@@ -55,25 +55,13 @@
                     
                     <div class="mobile-menu">
                         <div class="mobile-menu-container">
-                            <label for="menu-toggle" class="absolute top-6 right-6 text-3xl text-white cursor-pointer">
-                                <i class="fas fa-times"></i>
-                            </label>
-                            <div class="flex flex-col items-center justify-center space-y-8 py-12">
-                                <label for="menu-toggle">
-                                    <a href="#games" class="text-2xl text-white hover:text-[#FD0D1B]">Games</a>
-                                </label>
-                                <label for="menu-toggle">
-                                    <a href="#tools" class="text-2xl text-white hover:text-[#FD0D1B]">Tools</a>
-                                </label>
-                                <label for="menu-toggle">
-                                    <a href="#vision" class="text-2xl text-white hover:text-[#FD0D1B]">Vision</a>
-                                </label>
-                                <label for="menu-toggle">
-                                    <a href="#community" class="text-2xl text-white hover:text-[#FD0D1B]">Community</a>
-                                </label>
-                            </div>
+                            <a href="#games" class="block py-3 px-4 text-lg text-white hover:bg-gray-700 mobile-menu-link">Games</a>
+                            <a href="#tools" class="block py-3 px-4 text-lg text-white hover:bg-gray-700 mobile-menu-link">Tools</a>
+                            <a href="#vision" class="block py-3 px-4 text-lg text-white hover:bg-gray-700 mobile-menu-link">Vision</a>
+                            <a href="#community" class="block py-3 px-4 text-lg text-white hover:bg-gray-700 mobile-menu-link">Community</a>
                         </div>
                     </div>
+                    <label for="menu-toggle" class="mobile-menu-overlay"></label> <!-- Added overlay -->
                 </div>
             </div>
         </nav>
@@ -437,6 +425,17 @@
     <!-- MailerLite Integration Scripts -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (menuToggle) {
+              menuToggle.checked = false;
+            }
+          });
+        });
+
         const newsletterForm = document.getElementById('newsletter-form');
         const successMessage = document.getElementById('newsletter-success');
         const consentCheckbox = document.getElementById('gdpr-consent');
